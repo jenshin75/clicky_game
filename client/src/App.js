@@ -10,7 +10,7 @@ class App extends Component {
   state = {
     friends,
     score: 0,
-    topscore: 5,
+    topscore: 12,
     clicked: []
   };
 
@@ -19,7 +19,7 @@ class App extends Component {
     const friends = this.state.friends.filter(friend => friend.id !== id);
     // Set this.state.friends equal to the new friends array
     // this.setState({friends}); 
-
+    
     // HERE: you need to look if the card was clicked before
   if (friends[0].clicked) {
       // if yes you need to init
