@@ -10,7 +10,7 @@ class App extends Component {
   state = {
     friends,
     score: 0,
-    topscore: 0,
+    topscore: 5,
     clicked: []
   };
 
@@ -24,31 +24,19 @@ class App extends Component {
   if (friends[0].clicked) {
       // if yes you need to init
     friends[0].clicked = true;
-    this.handleIncrement();  // THIS WORKS!
+    this.handleIncrement();  
   }    
-//   else if (!friends[0].clicked) {
+else 
 //    // if no you need to update scores and shuffle and then updete the state
 //   friends[0].clicked = true;
-//   this.handleDecrement(); 
-// }    
-  // {
-  //   // if no you need to update scores and shuffle and then updete the state
-  //   this.handleDecement();
-  // } 
-  };
+this.handleDecrement(); 
+};
 
     // (this.state.clicked.includes(id)){
 
   // compare if the score is > topscore if ues update topsocre
-
-  // }
-
   // else{
-
   // updte the array push the id to the clicked
-
-
-
 
   // score++ (handleIncrement increments this.state.count by 1)
   handleIncrement = () => {

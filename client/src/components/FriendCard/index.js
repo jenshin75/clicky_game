@@ -10,19 +10,19 @@ function FriendCard(props) {
           // className="remove" 
           alt={props.name} src={props.image}/>
       </div>
-      {/* <div className="content">
-        <ul>
+      <div className="content">{props.id}
+        {/* <ul>
           <li>
-            <strong>Name:</strong> {props.name}
-          </li>
-          <li>
+            <strong>ID: </strong> {props.id}
+          </li> */}
+          {/* <li>
             <strong>Occupation:</strong> {props.occupation}
           </li>
           <li>
             <strong>Location:</strong> {props.location}
-          </li>
-        </ul> 
-      </div> */}
+          </li> */}
+        {/* </ul>  */}
+      </div>
     </div>
   );
 }
