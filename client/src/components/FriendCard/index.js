@@ -6,7 +6,9 @@ function FriendCard(props) {
     <div className="card">
       <div className="img-container">
         <img onClick={() =>
-          props.removeFriend(props.id)} className="remove" alt={props.name} src={props.image}/>
+          props.handleClick(props.id)} 
+          // className="remove" 
+          alt={props.name} src={props.image}/>
       </div>
       {/* <div className="content">
         <ul>
