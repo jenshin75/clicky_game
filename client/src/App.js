@@ -14,70 +14,78 @@ class App extends Component {
     clicked: []
   };
 
-handleClick = id => {
+  handleClick = id => {
     // Filter this.state.friends for friends with an id not equal to the id being clicked  
     const friends = this.state.friends.filter(friend => friend.id !== id);
     // Set this.state.friends equal to the new friends array
     // this.setState({friends}); 
 
     // HERE: you need to look if the card was clicked before
-    // if yes you need to init
-    // if no you need to update scores and shuffle and then updete the state
-
-this.handleIncrement();
-};
-
-// }
-//     else
-// {
-// this.handleDecrement();
+  if (friends[0].clicked) {
+      // if yes you need to init
+    friends[0].clicked = true;
+    this.handleIncrement();  // THIS WORKS!
+  }    
+//   else if (!friends[0].clicked) {
+//    // if no you need to update scores and shuffle and then updete the state
+//   friends[0].clicked = true;
+//   this.handleDecrement(); 
+// }    
+  // {
+  //   // if no you need to update scores and shuffle and then updete the state
+  //   this.handleDecement();
+  // } 
+  };
 
     // (this.state.clicked.includes(id)){
 
-    // compare if the score is > topscore if ues update topsocre
+  // compare if the score is > topscore if ues update topsocre
 
-    // }
+  // }
 
-    // else{
+  // else{
 
-    // updte the array push the id to the clicked
+  // updte the array push the id to the clicked
 
-    // score++ (handleIncrement increments this.state.count by 1)
-handleIncrement = () => {
-      // We always use the setState method to update a component's state
-      this.setState({ score: this.state.score + 1 });
-      this.shuffle(friends);
-};
 
-handleDecrement = () => {
-// We always use the setState method to update a component's state
-this.setState({ score: this.state.score - 1 });
-this.resetGame();
-};
 
-// shuffle
-shuffle = friends => {
-// https://stackoverflow.com/a/43235780/10503606
-let newFriends = friends.sort(() => Math.random() - 0.5);
-return newFriends;
-};
+
+  // score++ (handleIncrement increments this.state.count by 1)
+  handleIncrement = () => {
+    // We always use the setState method to update a component's state
+    this.setState({ score: this.state.score + 1 });
+    this.shuffle(friends);
+  };
+
+  handleDecrement = () => {
+    // We always use the setState method to update a component's state
+    this.setState({ score: this.state.score - 1 });
+    this.resetGame();
+  };
+
+  // shuffle
+  shuffle = friends => {
+    // https://stackoverflow.com/a/43235780/10503606
+    let newFriends = friends.sort(() => Math.random() - 0.5);
+    return newFriends;
+  };
 
 
   //}
 
-// Set this.state.friends equal to the new friends array
+  // Set this.state.friends equal to the new friends array
 
-//   this.setState({
-//     friends: newFriends,
-//     score: scoreTemp,
-//     topscore: topscoreTemp,
-//     clicked: clickedTemp
-// });
-// ;
+  //   this.setState({
+  //     friends: newFriends,
+  //     score: scoreTemp,
+  //     topscore: topscoreTemp,
+  //     clicked: clickedTemp
+  // });
+  // ;
 
-// Map over this.state.friends and render a FriendCard component for each friend object
+  // Map over this.state.friends and render a FriendCard component for each friend object
 
- render() {
+  render() {
     return (
       <Wrapper>
         <Title>Clicky Game</Title>
