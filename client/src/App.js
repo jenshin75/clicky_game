@@ -76,7 +76,7 @@ this.handleDecrement();
   render() {
     return (
       <Wrapper>
-        <Title>Clicky Game</Title>
+        <Title>Click 2 Score</Title>
         <Navbar1
           score={this.state.score}
           topscore={this.state.topscore}

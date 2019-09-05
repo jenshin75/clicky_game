@@ -7,7 +7,7 @@ function Navbar1(props) {
   return (
     <nav className="nav">
       <ul>
-        <li>Your Score: {props.score}</li>
+         <li>Your Score: {props.score}</li>
         <li>Top Score: {props.topscore}</li>
       </ul>
     </nav>

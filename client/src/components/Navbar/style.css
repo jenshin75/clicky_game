@@ -19,6 +19,8 @@
     text-align: center;
   }
   .nav li {
+    /* list-style-type: none; */
+    /* text-align: center; */
     display: inline-block;
     width: 33%;
     /* padding-top: 15px; */
