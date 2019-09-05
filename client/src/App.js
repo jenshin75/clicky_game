@@ -25,7 +25,6 @@ handleClick = id => {
     // if no you need to update scores and shuffle and then updete the state
 
 this.handleIncrement();
-// this.shuffle(friends);
 };
 
 // }
@@ -47,11 +46,13 @@ this.handleIncrement();
 handleIncrement = () => {
       // We always use the setState method to update a component's state
       this.setState({ score: this.state.score + 1 });
+      this.shuffle(friends);
 };
 
 handleDecrement = () => {
 // We always use the setState method to update a component's state
 this.setState({ score: this.state.score - 1 });
+this.resetGame();
 };
 
 // shuffle
